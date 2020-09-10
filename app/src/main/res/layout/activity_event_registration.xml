@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.events.EventRegistrationActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/eventImageLayout"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/web">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/black_transparent"
+                android:layout_centerInParent="true" />
+
+            <ImageView
+                android:id="@+id/back_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                app:tint="#fff"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_margin="8dp"
+                android:src="@drawable/ic_baseline_keyboard_backspace_24" />
+
+
+            <TextView
+                android:id="@+id/eventName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Web Development Workshop"
+                android:fontFamily="@font/muli"
+                android:textSize="19dp"
+                android:textStyle="bold"
+                android:layout_centerInParent="true"
+                android:textColor="#fff" />
+
+            <TextView
+                android:id="@+id/eventDateTime"
+                android:layout_width="wrap_content"
+                android:layout_below="@id/eventName"
+                android:layout_centerInParent="true"
+                android:textColor="@color/colorWhite"
+                android:layout_margin="5dp"
+                android:fontFamily="@font/muli"
+                android:layout_height="wrap_content"
+                android:text="SEP 21, 2020 9.00AM IST" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Event Registration Form"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/muli_bold"
+            android:textSize="19dp"
+            android:padding="5dp"
+            android:textColor="#fff"
+            android:background="@drawable/blue_bg_textview"/>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:hint="Name of Student"
+            app:boxStrokeColor="@color/colorBlue"
+            app:boxStrokeWidthFocused="2dp"
+            app:endIconMode="clear_text"
+            app:endIconTint="#000"
+            app:hintTextColor="@color/colorBlue"
+            app:startIconDrawable="@drawable/ic_baseline_person_outline_24"
+            app:startIconTint="#000">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/muli"
+                android:inputType="text"
+                android:textColor="#000" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:hint="Email ID"
+            app:boxStrokeColor="@color/colorBlue"
+            app:boxStrokeWidthFocused="2dp"
+            app:endIconMode="clear_text"
+            app:endIconTint="#000"
+            app:hintTextColor="@color/colorBlue"
+            app:startIconDrawable="@drawable/ic_baseline_email_24"
+            app:startIconTint="#000">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editMail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/muli"
+                android:inputType="text"
+                android:textColor="#000" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:hint="Phone Number"
+            app:boxStrokeColor="@color/colorBlue"
+            app:boxStrokeWidthFocused="2dp"
+            app:endIconMode="clear_text"
+            app:endIconTint="#000"
+            app:hintTextColor="@color/colorBlue"
+            app:startIconDrawable="@drawable/ic_baseline_phone_24"
+            app:startIconTint="#000">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editPhone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/muli"
+                android:inputType="number"
+                android:maxLength="10"
+                android:textColor="#000" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:hint="JNTU Number"
+            app:boxStrokeColor="@color/colorBlue"
+            app:boxStrokeWidthFocused="2dp"
+            app:endIconTint="#000"
+            app:hintTextColor="@color/colorBlue"
+            app:startIconDrawable="@drawable/ic_baseline_assignment_24"
+            app:startIconTint="#000">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/jntu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/muli"
+                android:textColor="#000" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_margin="8dp"
+            android:padding="5dp"
+            android:background="@drawable/spinner_bg"
+            android:entries="@array/departmentsList"
+            android:focusable="true" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:paddingStart="5dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/spinner_bg"
+            android:entries="@array/yearsList"
+            android:focusable="true" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:background="@color/colorBlue"
+            android:textColor="#fff"
+            android:layout_margin="8dp" />
+
+
+
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
