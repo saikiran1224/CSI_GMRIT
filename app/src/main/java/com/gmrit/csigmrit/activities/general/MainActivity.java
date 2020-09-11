@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.gmrit.csigmrit.R;
 import com.gmrit.csigmrit.activities.events.EventsActivity;
+import com.gmrit.csigmrit.activities.team.TeamDisplayActivity;
 import com.google.android.material.card.MaterialCardView;
 
 public class MainActivity extends AppCompatActivity {
@@ -24,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         csiText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, EventsActivity.class);
+                Intent intent = new Intent(MainActivity.this, TeamDisplayActivity.class);
                 startActivity(intent);
             }
         });

@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.events.EventRegistrationActivity"></activity>
+        <activity android:name=".activities.team.TeamDisplayActivity" />
+        <activity android:name=".activities.events.EventRegistrationActivity" />
         <activity android:name=".activities.events.EventsActivity" />
         <activity android:name=".activities.general.MainActivity">
             <intent-filter>
