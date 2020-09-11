@@ -32,6 +32,14 @@
         android:text="CSI GMRIT Student Chapter"
         android:layout_toRightOf="@id/csiLogo" />
 
+    <include
+        layout="@layout/activity_bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        />
+
 
 
 

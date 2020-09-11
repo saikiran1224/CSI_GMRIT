@@ -1,14 +1,23 @@
 package com.gmrit.csigmrit.activities.team;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
 
 import com.gmrit.csigmrit.R;
+import com.gmrit.csigmrit.activities.events.EventsActivity;
+import com.gmrit.csigmrit.activities.general.MainActivity;
 import com.gmrit.csigmrit.adapters.TeamDisplayAdapter;
+import com.gmrit.csigmrit.bottomnavigation.BottomNavigation;
 import com.gmrit.csigmrit.modals.TeamData;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,11 +27,43 @@ public class TeamDisplayActivity extends AppCompatActivity {
     List<TeamData> facultyList, fourthYearList, thirdYearList, secondYearList;
     RecyclerView facultyRecycler, fourthYearRecycler, thirdYearRecycler, secondYearRecycler;
     TeamDisplayAdapter facultyAdapter, fourthYearAdapter, thirdYearAdapter, secondYearAdapter;
+   BottomNavigationView Bootom;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_team_display);
+
+        Bootom = findViewById(R.id.bottomnav);
+        /*bottomnavigation*/
+        Bootom.setSelectedItemId(R.id.team);
+
+        Bootom.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                switch (item.getItemId()){
+                    case R.id.events:
+                        Intent intent = new Intent(TeamDisplayActivity.this, EventsActivity.class);
+                        startActivity(intent);
+                        overridePendingTransition(0,0);
+                        finish();
+                        return true;
+                    case R.id.team:
+                        return true;
+                    case R.id.membership:
+                        Toast.makeText(TeamDisplayActivity.this, "No Vacancies", Toast.LENGTH_SHORT).show();
+                        return false;
+                    case R.id.home:
+                        Intent member = new Intent(TeamDisplayActivity.this, EventsActivity.class);
+                        startActivity(member);
+                        finish();
+                        overridePendingTransition(0,0);
+                        return true;
+                }
+                return false;
+            }
+        });
 
         facultyRecycler = findViewById(R.id.facultyCoordinatorsList);
         fourthYearRecycler = findViewById(R.id.fourthYearCoordinatorsList);
