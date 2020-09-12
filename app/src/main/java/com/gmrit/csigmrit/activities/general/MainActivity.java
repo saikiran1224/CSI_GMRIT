@@ -13,6 +13,8 @@ import android.widget.Toast;
 import com.gmrit.csigmrit.R;
 import com.gmrit.csigmrit.activities.events.EventRegistrationActivity;
 import com.gmrit.csigmrit.activities.events.EventsActivity;
+import com.gmrit.csigmrit.activities.membership.MembershipActivity;
+import com.gmrit.csigmrit.activities.news.NewsActivity;
 import com.gmrit.csigmrit.activities.team.TeamDisplayActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.card.MaterialCardView;
@@ -54,8 +56,19 @@ public class MainActivity extends AppCompatActivity {
                         finish();
                         return true;
                     case R.id.membership:
-                        Toast.makeText(MainActivity.this, "No Vacancies", Toast.LENGTH_SHORT).show();
-                        return false;
+                        Intent membership = new Intent(MainActivity.this, MembershipActivity.class);
+                        startActivity(membership);
+                        overridePendingTransition(0,0);
+                        finish();
+                        return true;
+
+                    case R.id.news:
+                        Intent news = new Intent(MainActivity.this, NewsActivity.class);
+                        startActivity(news);
+                        overridePendingTransition(0,0);
+                        finish();
+                        return true;
+
                     case R.id.team:
                         Intent team = new Intent(MainActivity.this, TeamDisplayActivity.class);
                         startActivity(team);

@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".bottomnavigation.BottomNavigation"></activity>
+        <activity android:name=".activities.membership.MembershipActivity"></activity>
+        <activity android:name=".activities.news.IndividualNewsActivity" />
+        <activity android:name=".activities.news.NewsActivity" />
+        <activity android:name=".bottomnavigation.BottomNavigation" />
         <activity android:name=".activities.team.TeamDisplayActivity" />
         <activity android:name=".activities.events.EventRegistrationActivity" />
         <activity android:name=".activities.events.EventsActivity" />

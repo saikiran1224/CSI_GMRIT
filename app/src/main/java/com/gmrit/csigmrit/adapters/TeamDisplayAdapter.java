@@ -9,6 +9,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.gmrit.csigmrit.R;
@@ -50,7 +51,7 @@ public class TeamDisplayAdapter extends RecyclerView.Adapter<TeamDisplayAdapter.
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         LinearLayout imageLayout;
-        RelativeLayout relativeLayout;
+        CardView relativeLayout;
         TextView txtTeamName, txtTeamRole;
 
 

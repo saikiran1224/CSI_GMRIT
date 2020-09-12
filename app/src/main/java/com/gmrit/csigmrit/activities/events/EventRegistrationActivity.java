@@ -36,6 +36,7 @@ public class EventRegistrationActivity extends AppCompatActivity {
             }
         });
 
+
         Bundle bundle = getIntent().getExtras();
         assert bundle != null;
         String eventName = bundle.getString("eventName");
