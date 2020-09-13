@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,353 +6,239 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="0dp"
-    android:background="#FBFCFC"
+    android:background="@color/colorWhite"
     tools:context=".activities.general.MainActivity">
 
-    <RelativeLayout
-        android:id="@+id/logo"
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/txtWelcomeTitle"
+        android:layout_width="match_parent"
+        android:padding="10dp"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_gravity="center_horizontal"
-        android:layout_margin="10dp"
-        android:gravity="center_horizontal">
+        android:background="@drawable/semi_cirlce">
 
         <ImageView
-            android:id="@+id/csiLogo"
             android:layout_width="80dp"
             android:layout_height="80dp"
+            android:src="@drawable/csilogo"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:layout_margin="10dp"
-            android:src="@drawable/csilogo" />
+            android:id="@+id/csiLogo" />
 
-        <View
-            android:id="@+id/divider"
-            android:layout_width="3dp"
-            android:layout_height="80dp"
+        <TextView
+            android:id="@+id/csiText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center_horizontal"
             android:layout_centerInParent="true"
             android:layout_toRightOf="@id/csiLogo"
-            android:background="@color/colorBlue" />
-
-        <ImageView
-            android:id="@+id/gmrLogo"
-            android:layout_width="130dp"
-            android:layout_height="80dp"
-            android:layout_margin="10dp"
-            android:layout_toRightOf="@id/divider"
-            android:scaleType="fitXY"
-            android:src="@drawable/gmr" />
-
+            android:text="Welcome to CSI GMRIT Student Chapter"
+            android:layout_centerHorizontal="true"
+            android:textColor="#ffffff"
+            android:textSize="17dp"
+            android:textStyle="bold" />
     </RelativeLayout>
 
-    <TextView
-        android:id="@+id/csiText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/logo"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="10dp"
-        android:fontFamily="@font/quicksand"
-        android:text="CSI - GMRIT Student Chapter"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+
+
 
     <TextView
-        android:id="@+id/csiVision"
-        android:layout_width="wrap_content"
+        android:id="@+id/txtWhatsNew"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/csiText"
-        android:layout_centerHorizontal="true"
+        android:text="What's new"
         android:layout_margin="10dp"
-        android:text="Our Vision"
-        android:textColor="@color/colorDarkBlue"
-        android:textSize="16sp"
+        android:layout_below="@id/txtWelcomeTitle"
+        android:textColor="@color/colorBlue"
         android:textStyle="bold"
-        android:fontFamily="@font/quicksand"/>
+        android:textSize="19dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/txtWhatsNew"
+        android:id="@+id/homePageNewsRecylcer" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/statistics"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:layout_height="110dp"
+        android:layout_centerInParent="true"
+        android:padding="5dp"
+        android:weightSum="3"
+        android:layout_below="@id/homePageNewsRecylcer"
+        android:background="@color/colorBlue"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="35dp"
+                app:tint="@color/colorWhite"
+                android:layout_height="35dp"
+                android:src="@drawable/ic_baseline_person_outline_24" />
+
+            <TextView
+             android:layout_width="match_parent"
+             android:textColor="@color/colorWhite"
+             android:gravity="center"
+             android:textStyle="bold"
+             android:layout_margin="5dp"
+             android:textSize="18dp"
+             android:layout_height="match_parent"
+             android:text="150" />
+
+            <View
+                android:layout_width="40dp"
+                android:background="@color/colorWhite"
+
+                android:layout_height="1dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:textColor="@color/colorWhite"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:padding="5dp"
+                android:textStyle="bold"
+                android:text="Members" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="35dp"
+                app:tint="@color/colorWhite"
+                android:layout_height="35dp"
+                android:src="@drawable/ic_baseline_event_note_24" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:textColor="@color/colorWhite"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_margin="5dp"
+                android:textSize="18dp"
+                android:layout_height="match_parent"
+                android:text="200" />
+
+            <View
+                android:layout_width="40dp"
+                android:background="@color/colorWhite"
+
+                android:layout_height="1dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:textColor="@color/colorWhite"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:padding="5dp"
+                android:textStyle="bold"
+                android:text="Events" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="35dp"
+                app:tint="@color/colorWhite"
+                android:layout_height="35dp"
+                android:src="@drawable/ic_baseline_people_outline_24" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:textColor="@color/colorWhite"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_margin="5dp"
+                android:textSize="18dp"
+                android:layout_height="match_parent"
+                android:text="1125" />
+
+            <View
+                android:layout_width="40dp"
+                android:background="@color/colorWhite"
+
+                android:layout_height="1dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:textColor="@color/colorWhite"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:padding="5dp"
+                android:textStyle="bold"
+                android:text="Participants" />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
 
     <TextView
-        android:id="@+id/csiVisionText"
-        android:layout_width="wrap_content"
+        android:id="@+id/txtAboutCSI"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/csiVision"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:fontFamily="@font/quicksand"
-        android:text="@string/visionText"
-        android:textSize="14sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:id="@+id/csiMission"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/csiVisionText"
-        android:layout_centerHorizontal="true"
+        android:text="About Us"
         android:layout_margin="10dp"
-        android:fontFamily="@font/quicksand"
-        android:text="Our Mission"
-        android:textColor="@color/colorDarkBlue"
-        android:textSize="16sp"
-        android:textStyle="bold" />
+        android:layout_below="@id/statistics"
+        android:textColor="@color/colorBlue"
+        android:textStyle="bold"
+        android:textSize="19dp" />
 
     <TextView
-        android:id="@+id/csiMissionText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/csiMission"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:fontFamily="@font/quicksand"
-        android:text="@string/missionText"
-        android:textSize="14sp"
-        android:textStyle="bold" />
-
-
-    <TextView
-        android:id="@+id/mileStone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/csiMissionText"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/quicksand"
-        android:text="CSI - GMRIT Milestone"
-        android:textColor="@color/colorDarkBlue"
-        android:textSize="16sp"
-        android:textStyle="bold" />
-
-    <LinearLayout
-        android:id="@+id/mileStoneDetails"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/mileStone"
-        android:layout_centerHorizontal="true"
-        android:gravity="center"
-        android:orientation="horizontal">
+        android:text="CSI GMRIT Chapter is established in the Year 2007. Currently, CSI in our College achieved three times consecutively the Best Chapter Award in South Indian Division. Our Chapter got many achievements from Various Institutes for its Events. Every year, CSI is going to conduct TECHNOFEST, a National Level Fest\n Visit us at https://www.csi.gmrit.org"
+        android:layout_below="@id/txtAboutCSI"
+        android:layout_marginRight="10dp"
+        android:gravity="start"
+        android:justificationMode="inter_word"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/aboutUsDescription" />
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_margin="10dp"
-            android:background="?attr/selectableItemBackground"
-            android:clickable="true"
-            android:focusable="true"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="5dp">
-
-            <LinearLayout
-                android:id="@+id/cardEvents"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="10dp"
-                android:background="?attr/selectableItemBackground"
-                android:clickable="true"
-                android:focusable="true"
-                android:gravity="center|center_vertical"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center"
-                    android:layout_margin="5dp"
-                    android:fontFamily="@font/quicksand"
-                    android:text="Events"
-                    android:textColor="#000000"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center"
-                    android:layout_margin="5dp"
-                    android:fontFamily="@font/quicksand"
-                    android:text="60"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_margin="10dp"
-            android:background="?attr/selectableItemBackground"
-            android:clickable="true"
-            android:focusable="true"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="5dp">
-
-            <LinearLayout
-                android:id="@+id/cardInternal"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="10dp"
-                android:background="?attr/selectableItemBackground"
-                android:clickable="true"
-                android:focusable="true"
-                android:gravity="center|center_vertical"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center"
-                    android:layout_margin="5dp"
-                    android:fontFamily="@font/quicksand"
-                    android:text="Internal"
-                    android:textColor="#000000"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center"
-                    android:layout_margin="5dp"
-                    android:fontFamily="@font/quicksand"
-                    android:text="20"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_margin="10dp"
-            android:background="?attr/selectableItemBackground"
-            android:clickable="true"
-            android:focusable="true"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="5dp">
-
-            <LinearLayout
-                android:id="@+id/cardExternal"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="10dp"
-                android:background="?attr/selectableItemBackground"
-                android:clickable="true"
-                android:focusable="true"
-                android:gravity="center|center_vertical"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center"
-                    android:layout_margin="5dp"
-                    android:fontFamily="@font/quicksand"
-                    android:text="External"
-                    android:textColor="#000000"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center"
-                    android:layout_margin="5dp"
-                    android:fontFamily="@font/quicksand"
-                    android:text="40"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-
-        </androidx.cardview.widget.CardView>
-
-
-    </LinearLayout>
-
-
-    <TextView
-        android:id="@+id/memberShipHeading"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/mileStoneDetails"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/quicksand"
-        android:text="CSI - GMRIT Memberships (Still Counting)"
-        android:textColor="@color/colorDarkBlue"
-        android:textSize="16sp"
-        android:textStyle="bold" />
-
-    <LinearLayout
-        android:id="@+id/memberShipDeatils"
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/memberShipHeading"
         android:layout_centerHorizontal="true"
-        android:gravity="center"
-        android:orientation="horizontal">
+        android:layout_marginBottom="55dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/aboutUsDescription"
+        android:layout_marginTop="10dp"
+        android:id="@+id/essentialRecycler" />
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_margin="10dp"
-            android:background="?attr/selectableItemBackground"
-            android:clickable="true"
-            android:focusable="true"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="5dp">
+        </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/cardMemberShips"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="10dp"
-                android:background="?attr/selectableItemBackground"
-                android:clickable="true"
-                android:focusable="true"
-                android:gravity="center|center_vertical"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center"
-                    android:layout_margin="5dp"
-                    android:fontFamily="@font/quicksand"
-                    android:text="Count"
-                    android:textColor="#000000"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center"
-                    android:layout_margin="5dp"
-                    android:fontFamily="@font/quicksand"
-                    android:text="60"
-                    android:textSize="14sp"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
-
-
-        </androidx.cardview.widget.CardView>
-
-    </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
 
 
     <include

@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">CSI GMRIT</string>
-    <string name="visionText">Advancement of Theory and Practice of Computer Science and Engineering and related Arts and Sciences.</string>
+    <string name="visionText">Advancement of Theory and Practice of Computers.</string>
     <string name="missionText">Percolate benefits of IT advancement to all sections of Indian Society.</string>
 
     <string-array name="departmentsList">
