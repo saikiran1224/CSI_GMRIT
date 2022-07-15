@@ -73,7 +73,7 @@
                 android:background="@drawable/blue_bg_textview"
                 android:fontFamily="@font/muli_bold"
                 android:padding="5dp"
-                android:text="Event Registration Form"
+                android:text="\tRequest Quote\t"
                 android:textColor="#fff"
                 android:textSize="19dp" />
 
@@ -83,7 +83,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:hint="Name of Student"
+                android:hint="Enter your Name"
                 app:boxStrokeColor="@color/colorBlue"
                 app:boxStrokeWidthFocused="2dp"
                 app:endIconMode="clear_text"
@@ -156,7 +156,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:hint="JNTU Number"
+                android:hint="Ask your Question"
                 app:boxStrokeColor="@color/colorBlue"
                 app:boxStrokeWidthFocused="2dp"
                 app:endIconTint="#000"
@@ -178,6 +178,7 @@
                 android:layout_height="55dp"
                 android:layout_margin="8dp"
                 android:background="@drawable/spinner_bg"
+                android:visibility="gone"
                 android:entries="@array/departmentsList"
                 android:focusable="true"
                 android:padding="5dp" />
@@ -188,6 +189,7 @@
                 android:layout_margin="8dp"
                 android:background="@drawable/spinner_bg"
                 android:entries="@array/yearsList"
+                android:visibility="gone"
                 android:focusable="true"
                 android:paddingStart="5dp" />
 
@@ -195,8 +197,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:background="@color/colorBlue"
-                android:text="Register"
+                android:background="@color/colorDarkGrey"
+                android:text="submit"
                 android:textColor="#fff" />
         </LinearLayout>
 

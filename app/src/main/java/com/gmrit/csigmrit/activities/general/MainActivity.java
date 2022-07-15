@@ -68,9 +68,9 @@ public class MainActivity extends AppCompatActivity {
         homePageNewsDataList = new ArrayList<>();
         homePageNewsRecycler = findViewById(R.id.homePageNewsRecylcer);
 
-        homePageNewsDataList.add(new HomePageNewsData(R.drawable.android));
-        homePageNewsDataList.add(new HomePageNewsData(R.drawable.web));
-        homePageNewsDataList.add(new HomePageNewsData(R.drawable.enhanced));
+        homePageNewsDataList.add(new HomePageNewsData(R.drawable.vertical_forest));
+        homePageNewsDataList.add(new HomePageNewsData(R.drawable.apartments));
+        homePageNewsDataList.add(new HomePageNewsData(R.drawable.individual_house));
 
         homePageNewsAdapter = new HomePageNewsAdapter(MainActivity.this, homePageNewsDataList);
         LinearLayoutManager linearLayoutManager1 = new LinearLayoutManager(MainActivity.this, LinearLayoutManager.HORIZONTAL, false);

@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="10dp"
     android:background="@color/colorWhite"
     tools:context=".activities.general.MainActivity">
 
@@ -26,24 +25,24 @@
         android:background="@drawable/semi_cirlce">
 
         <ImageView
+            android:id="@+id/csiLogo"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:src="@drawable/csilogo"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:id="@+id/csiLogo" />
+            android:src="@drawable/vertical_logo"
+            app:tint="@color/colorWhite" />
 
         <TextView
             android:id="@+id/csiText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:gravity="center_horizontal"
             android:layout_centerInParent="true"
+            android:layout_marginStart="15dp"
             android:layout_toRightOf="@id/csiLogo"
-            android:text="Welcome to CSI GMRIT Student Chapter"
-            android:layout_centerHorizontal="true"
-            android:textColor="#ffffff"
+            android:gravity="center_horizontal"
+            android:text="Welcome to Tripura Constructions"
+            android:textColor="@color/colorWhite"
             android:textSize="17dp"
             android:textStyle="bold" />
     </RelativeLayout>
@@ -58,7 +57,7 @@
         android:text="What's new"
         android:layout_margin="10dp"
         android:layout_below="@id/txtWelcomeTitle"
-        android:textColor="@color/colorBlue"
+        android:textColor="@color/colorDarkGrey"
         android:textStyle="bold"
         android:textSize="19dp" />
 
@@ -80,7 +79,7 @@
         android:padding="5dp"
         android:weightSum="3"
         android:layout_below="@id/homePageNewsRecylcer"
-        android:background="@color/colorBlue"
+        android:background="@color/colorLightGrey"
         android:orientation="horizontal">
 
         <LinearLayout
@@ -92,13 +91,13 @@
 
             <ImageView
                 android:layout_width="35dp"
-                app:tint="@color/colorWhite"
+                app:tint="@color/colorPrimaryDark"
                 android:layout_height="35dp"
                 android:src="@drawable/ic_baseline_person_outline_24" />
 
             <TextView
              android:layout_width="match_parent"
-             android:textColor="@color/colorWhite"
+             android:textColor="@color/colorDarkGrey"
              android:gravity="center"
              android:textStyle="bold"
              android:layout_margin="5dp"
@@ -108,17 +107,16 @@
 
             <View
                 android:layout_width="40dp"
-                android:background="@color/colorWhite"
-
+                android:background="@color/colorDarkGrey"
                 android:layout_height="1dp" />
             <TextView
                 android:layout_width="match_parent"
-                android:textColor="@color/colorWhite"
+                android:textColor="@color/colorDarkGrey"
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:padding="5dp"
                 android:textStyle="bold"
-                android:text="Members" />
+                android:text="Customers" />
 
         </LinearLayout>
 
@@ -131,13 +129,13 @@
 
             <ImageView
                 android:layout_width="35dp"
-                app:tint="@color/colorWhite"
+                app:tint="@color/colorPrimaryDark"
                 android:layout_height="35dp"
                 android:src="@drawable/ic_baseline_event_note_24" />
 
             <TextView
                 android:layout_width="match_parent"
-                android:textColor="@color/colorWhite"
+                android:textColor="@color/colorDarkGrey"
                 android:gravity="center"
                 android:textStyle="bold"
                 android:layout_margin="5dp"
@@ -147,17 +145,16 @@
 
             <View
                 android:layout_width="40dp"
-                android:background="@color/colorWhite"
-
+                android:background="@color/colorDarkGrey"
                 android:layout_height="1dp" />
             <TextView
                 android:layout_width="match_parent"
-                android:textColor="@color/colorWhite"
+                android:textColor="@color/colorDarkGrey"
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:padding="5dp"
                 android:textStyle="bold"
-                android:text="Events" />
+                android:text="Ongoing Projects" />
 
         </LinearLayout>
 
@@ -170,13 +167,13 @@
 
             <ImageView
                 android:layout_width="35dp"
-                app:tint="@color/colorWhite"
+                app:tint="@color/colorPrimaryDark"
                 android:layout_height="35dp"
-                android:src="@drawable/ic_baseline_people_outline_24" />
+                android:src="@drawable/ic_baseline_house_24" />
 
             <TextView
                 android:layout_width="match_parent"
-                android:textColor="@color/colorWhite"
+                android:textColor="@color/colorDarkGrey"
                 android:gravity="center"
                 android:textStyle="bold"
                 android:layout_margin="5dp"
@@ -186,17 +183,16 @@
 
             <View
                 android:layout_width="40dp"
-                android:background="@color/colorWhite"
-
+                android:background="@color/colorDarkGrey"
                 android:layout_height="1dp" />
             <TextView
                 android:layout_width="match_parent"
-                android:textColor="@color/colorWhite"
+                android:textColor="@color/colorDarkGrey"
                 android:layout_height="match_parent"
                 android:gravity="center"
                 android:padding="5dp"
                 android:textStyle="bold"
-                android:text="Participants" />
+                android:text="Total Ventures" />
 
         </LinearLayout>
 
@@ -211,18 +207,19 @@
         android:text="About Us"
         android:layout_margin="10dp"
         android:layout_below="@id/statistics"
-        android:textColor="@color/colorBlue"
+        android:textColor="@color/colorDarkGrey"
         android:textStyle="bold"
         android:textSize="19dp" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="CSI GMRIT Chapter is established in the Year 2007. Currently, CSI in our College achieved three times consecutively the Best Chapter Award in South Indian Division. Our Chapter got many achievements from Various Institutes for its Events. Every year, CSI is going to conduct TECHNOFEST, a National Level Fest\n Visit us at https://www.csi.gmrit.org"
+        android:text="Tripura Constructions kicked off in 2007 with an eagle’s eye on three main principles - top quality residential homes, extremely competitive pricing and a futuristic location.\n\nVisit us at https://tripuraconstructions.com/"
         android:layout_below="@id/txtAboutCSI"
         android:layout_marginRight="10dp"
         android:gravity="start"
         android:justificationMode="inter_word"
+        android:autoLink="web"
         android:layout_marginLeft="10dp"
         android:id="@+id/aboutUsDescription" />
 
@@ -230,7 +227,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="55dp"
+        android:layout_marginBottom="75dp"
         android:layout_alignParentStart="true"
         android:layout_below="@id/aboutUsDescription"
         android:layout_marginTop="10dp"
@@ -244,7 +241,7 @@
     <include
         layout="@layout/activity_bottom_navigation"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="60dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true" />
 

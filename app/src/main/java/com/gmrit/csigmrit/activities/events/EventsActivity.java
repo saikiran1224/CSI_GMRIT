@@ -85,9 +85,9 @@ public class EventsActivity extends AppCompatActivity {
         eventDataList = new ArrayList<>();
 
 
-        eventDataList.add(new EventData(R.drawable.csi_inaug,"CSI Foundation Day","There are two guests from Steelplant Vizag where, there will be demonstrating about Software Engineering Concepts","AUG 05 2020, 10.30AM","Workshop"));
-        eventDataList.add(new EventData(R.drawable.web,"Web Development Workshop","Here we will be telling about Web Development using HTML, CSS and Javascript","SEP 11 2020, 9.00AM","Workshop"));
-        eventDataList.add(new EventData(R.drawable.android,"Android App Development ","Here we will be telling about Mobile App Development using Android Studio","SEP 14 2020, 6.00PM","Event"));
+        eventDataList.add(new EventData(R.drawable.apartments,"Tripura Galaxy","Ruminate & Unwind your thoughts in the Galaxy of Tripura Own a spacious and well-ventilated apartment @Tripura Galaxy to suit your modern lifestyle","2&3BHK Apartments","Ongoing"));
+        eventDataList.add(new EventData(R.drawable.individual_house,"Tripura Landmark – III","Embrace your Pride in the form of a Duplex in Tripura Landmark III Have a Vacation for your lifetime","3BHK Villas","Ongoing"));
+        eventDataList.add(new EventData(R.drawable.vertical_forest,"Green Alpha","first-ever high rise gated community with green buildings – vertical forest apartments, one of its kind in Hyderabad. This greenery is bizarre.","2&3BHK Apartments","Ongoing"));
 
         eventsDisplayAdapter = new EventsDisplayAdapter(EventsActivity.this, eventDataList);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(EventsActivity.this, LinearLayoutManager.VERTICAL, false);

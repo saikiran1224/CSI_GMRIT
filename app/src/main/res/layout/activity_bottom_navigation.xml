@@ -17,10 +17,10 @@
             <com.google.android.material.bottomnavigation.BottomNavigationView
                 android:id="@+id/bottomnav"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="60dp"
                 android:background="@drawable/rounded_bottom"
-                app:itemIconTint="@color/bottom_color"
-                app:itemTextColor="@color/bottom_color"
+                app:itemIconTint="@color/colorDarkGrey"
+                app:itemTextColor="@color/colorDarkGrey"
                 app:menu="@menu/bottom_navigation_menu"
                 app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"/>/>
         </FrameLayout>

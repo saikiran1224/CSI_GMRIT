@@ -14,7 +14,7 @@
         android:layout_height="match_parent"
         android:layout_centerInParent="true"
         android:layout_alignParentStart="true"
-        app:tint="@color/colorBlue"
+        app:tint="@color/colorDarkGrey"
         android:id="@+id/backgroundImage"
         android:scaleType="centerCrop"
         android:padding="5dp"
@@ -30,7 +30,7 @@
         android:textSize="14dp"
         android:id="@+id/txtEssentialName"
         android:layout_centerHorizontal="true"
-        android:textColor="@color/colorBlue"
+        android:textColor="@color/colorDarkGrey"
         android:textStyle="bold" />
 
     <View
@@ -40,20 +40,20 @@
         android:layout_marginTop="5dp"
         android:id="@+id/essentialLine"
         android:layout_centerHorizontal="true"
-        android:background="@color/colorBlue" />
+        android:background="@color/colorDarkGrey" />
 
     <TextView
         android:id="@+id/essentialDescription"
         android:layout_width="match_parent"
-        android:gravity="center"
         android:layout_height="wrap_content"
-        android:text="@string/missionText"
+        android:layout_below="@id/essentialLine"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/essentialLine"
+        android:gravity="center"
         android:padding="8dp"
-        android:textSize="12dp"
-        android:textColor="@color/colorBlue" />
+        android:text="@string/missionText"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="12dp" />
 
 
 </RelativeLayout>

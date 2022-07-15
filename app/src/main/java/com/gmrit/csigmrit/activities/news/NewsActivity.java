@@ -87,10 +87,10 @@ public class NewsActivity extends AppCompatActivity {
 
         newsListRecylcer = findViewById(R.id.newsList);
 
-        newsDataList.add(new NewsData(R.drawable.enhanced, "IT Champs won 3rd Prize in \nHACK AI on HEALTH", "23","DEC","2019"));
-        newsDataList.add(new NewsData(R.drawable.pythonworkshop, "Grand Success Python Workshop", "19","SEP","2019"));
-        newsDataList.add(new NewsData(R.drawable.csi_2017, "CSI Wins 3rd Time Best Chapter Award", "20","AUG","2018"));
-        newsDataList.add(new NewsData(R.drawable.csi_2016, "CSI Wins 2nd Time Best Chapter Award", "15","JUN", "2017"));
+        newsDataList.add(new NewsData(R.drawable.ghmc, "Know The Difference Between GHMC & HMDA", "16","JAN","2022"));
+        newsDataList.add(new NewsData(R.drawable.wfh, "Work From Home – Brightens – Demand For Homes", "09","JAN","2022"));
+        newsDataList.add(new NewsData(R.drawable.findout, "Find Out – How To Buy a Property", "22","JAN","2022"));
+        newsDataList.add(new NewsData(R.drawable.vertical_forest, "Vertical Garden & Its Impact On Summer", "03","MAR", "2022"));
 
         newsDisplayAdapter = new NewsDisplayAdapter(NewsActivity.this, newsDataList);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(NewsActivity.this, LinearLayoutManager.VERTICAL, false);
